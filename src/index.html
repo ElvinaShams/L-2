@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+  </head>
+  <body>
+    <main class="main">
+      <h1 class="title">Игра: Крестики-нолики</h1>
+      <div class="winner">Победитель</div>
+      <div class="wrapper friend">
+        <div class="block" data-id="0"></div>
+        <div class="block" data-id="1"></div>
+        <div class="block" data-id="2"></div>
+        <div class="block" data-id="3"></div>
+        <div class="block" data-id="4"></div>
+        <div class="block" data-id="5"></div>
+        <div class="block" data-id="6"></div>
+        <div class="block" data-id="7"></div>
+        <div class="block" data-id="8"></div>
+      </div>
+      <div class="users-info">
+        <p class="user"></p>
+        <button class="restart">Restart</button>
+       
+      </div>
+      <div class="radio-buttons friend">
+        
+          <input type="radio" id="friend" class="choice__input checked" name="choice" checked>
+          <label class="choice__label" for="friend">
+          С другом
+        </label>
+        
+          <input type="radio" id="light" class="choice__input" name="choice">
+          <label class="choice__label" for="light"> Легкий уровень (бот)
+        </label>
+       
+          <input type="radio" id="hard" class="choice__input" name="choice">
+          <label class="choice__label" for="hard">Сложный уровень (бот)
+        </label>
+      </div>
+    </main>
+    <script src="scripts/script.js"></script>
+  </body>
+</html>
