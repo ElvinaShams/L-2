@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="header"><h1>Калькулятор калорий</h1></header>
+    <main class="main">
+      <div class="wrapper">
+        <div class="user">
+          <h1>Ваши данные:</h1>
+          <div class="wrapper__data-user">
+            <div class="gender">
+              <p class="gender_text">Пол:</p>
+              <input type="radio" class="man" id="man" name="gender" checked/>
+              <label for="man">Мужской</label>
+              <input type="radio" class="woman" id="woman" name="gender" />
+              <label for="woman">Женский</label>
+            </div>
+            <div class="user__parameter">
+              <div class="age">
+                <p class="age__text">Ваш возраст:</p>
+                <label><input type="number" class="age__input" />лет</label>
+              </div>
+              <div class="height">
+                <p class="height__text">Ваш рост:</p>
+                <label><input type="number" class="height__input" />см</label>
+              </div>
+              <div class="weight">
+                <p class="weight__text">Ваш вес:</p>
+                <label><input type="number" class="weight__input" />кг</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="kkal">
+            Сколько нужно каллорий в день:
+            <p class="value__kkal"></p>
+          </div>
+        </div>
+        <div class="wrapper__check-kkal">
+          <div class="products">
+            <div class="filter">
+              <label for="nofilter-name"
+                ><input
+                  type="radio"
+                  id="nofilter-name"
+                  name="filter"
+                  value="default"
+                  checked
+                />По-умолчанию</label
+              >
+              <label for="filter-name"
+                ><input
+                  type="radio"
+                  id="filter-name"
+                  name="filter"
+                  value="name"
+                />По-названию</label
+              >
+              <label for="filter-min"
+                ><input
+                  type="radio"
+                  id="filter-min"
+                  name="filter"
+                  value="min-kkal"
+                />По-min</label
+              >
+              <label for="filter-max"
+                ><input
+                  type="radio"
+                  id="filter-max"
+                  name="filter"
+                  value="max-kkal"
+                />По-max</label
+              >
+
+              <button type="button" class="clear__list button">
+                Очистить все
+              </button>
+            </div>
+
+            <div class="wrapper__list">
+              <ul class="product__list"></ul>
+              <div class="product-add">
+                <label for="product-name"
+                  >Продукт:<input type="text" id="product-name" name="product" oninput="this.value=this.value.replace(/[^a-zA-ZА-Яа-яЁё]/g,'');"
+                /></label>
+                <label for="product-kkal"
+                  >Kkal:<input type="number" id="product-kkal" step="1" name="kkal"
+                /></label>
+              </div>
+              <button class="add-product button">Добавить</button>
+            </div>
+            <div>
+              <div class="chart__marker">
+                <svg viewBox="0 0 300 300" >
+                  <circle class="track"  cx="150" cy="150" r="79.61" />
+                  <circle id="Circ_points" transform="rotate(-90 150 150)"  cx="150" cy="150" r="79.61" 
+                           fill="none" stroke="black" stroke-width="15" stroke-dasharray="500" 
+                      stroke-dashoffset="500"  />
+                  <text x="50%" y="50%" fill="#ffffff" id="txt1"  text-anchor="middle" font-size="42px">0 Kkal</text>
+                   <text x="150" y="180"   text-anchor="middle" font-size="24px" fill="#ffffff">
+                     <tspan>Употребленные</tspan> 
+                     <tspan x="150" y="200">Kkal</tspan>	 </text>
+                </svg>
+                
+              </div>
+              <label for="check-kkal" class="add__kkal button"
+                >Подсчет каллорий</label
+              >
+              <input
+                type="button"
+                class="check__kkal"
+                id="check-kkal"
+                title="check-kkal"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="scripts/script.js"></script>
+  </body>
+</html>

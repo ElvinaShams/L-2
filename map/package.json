@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "webpack": "^5.89.0",
+    "webpack-dev-server": "^4.15.1"
+  },
+  "start": "webpack-dev-server --mode development",
+  "build": "webpack --mode production",
+  "scripts" : {
+    "build" : "webpack"
+  }
+}
