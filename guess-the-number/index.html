@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <title>Угадай число</title>
+  </head>
+
+  <body>
+    <header class="header">
+      <h1 class="header-title">Угадай число</h1>
+      <div class="prevention visually-hidden" id="prevention"></div>
+    </header>
+    <main class="main">
+      <div class="wrapper">
+        <div class="wrapper-setting">
+          <h2 id="title" class="title">
+            Я загадал число от 1 до 100, попробуйте его отгадать
+          </h2>
+          <div class="wrapper-buttons hidden">
+            <button id="settings" class="settings" type="button">
+              Настройка
+            </button>
+            <div id="range" class="range visually-hidden">
+              Загадывать числа в диапазоне
+              <label>
+                от:
+                <input id="min-number-input" type="number" value="1" />
+              </label>
+              <label>
+                до
+                <input id="max-number-input" type="number" value="100" />
+              </label>
+            </div>
+            <button id="restart" class="restart" type="button">Заново</button>
+          </div>
+        </div>
+        <div id="form" class="form">
+          <label for="number-input">
+            <input
+              type="number"
+              id="number-input"
+              class="number-input"
+              placeholder="Введите число"
+              min="1"
+              max="1000"
+            />
+          </label>
+          <button type="submit" id="number-submit">Ответить</button>
+        </div>
+        <div class="info">
+          <div id="history" class="history">
+            <div class="answer-count" id="answer-count"></div>
+            <div id="answer-items" class="answer-items"></div>
+          </div>
+        </div>
+        <div id="help" class="help-text"></div>
+      </div>
+    </main>
+    <script src="./js/script.js" type="module"></script>
+  </body>
+</html>
